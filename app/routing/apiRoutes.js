@@ -1,16 +1,16 @@
 //dependencies 
 const express = require('express');
+let friends = require("../data/friend");
+let router = express.Router();
 
-const friends = require("../data/friend")
-let routerAPI = express.Router();
 
 
-//api display
 
- routerAPI.get("/api/friends", function(req, res) {
+router.get("/friends", function (req, res) {
+    
     return res.json(friends);
-  });
+});
 
 
 
-  module.exports = routerAPI; 
+module.exports = router; 

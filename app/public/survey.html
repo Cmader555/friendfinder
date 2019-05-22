@@ -153,7 +153,7 @@
 
                 </div>
                 <div>
-                        <button class="btn btn-warning submit" id="submitQuiz" type="submit">Submit</button>
+                    <button class="btn btn-warning submit" id="submitQuiz" type="submit">Submit</button>
                 </div>
             </form>
 
@@ -162,17 +162,57 @@
             <a href="/" class="btn btn-warning">Go Home <i class="fas fa-home"></i></a>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="http://localhost:3000/api/friends">Friends API</a>
+                |
+                <a href="https://github.com/Cmader555/friendfinder">GitHub Repo</a>
+
+
+            </p>
+
+
+        </div>
+    </footer>
 
 
 
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        $("#submitQuiz").on("click", function (event) {
+            event.preventDefault();
+
+            let newFriends = {
+                name: $("#name").val().trim(),
+                photo: $("#photo-link").val().trim(),
+                scores: [
+
+                    $("#sel1").val(),
+                    $("#sel2").val(),
+                    $("#sel3").val(),
+                    $("#sel4").val(),
+                    $("#sel5").val(),
+                    $("#sel6").val(),
+                    $("#sel7").val(),
+                    $("#sel8").val(),
+                    $("#sel9").val(),
+                    $("#sel10").val()
+
+                ]
+
+            };
+            console.log(newFriends);
+
+
+        });
+
+
+
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
