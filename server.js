@@ -4,7 +4,7 @@ const path = require("path");
 
 // runs express
 const app = express(); 
-const PORT = 3000; 
+const PORT = process.env.PORT || 8080; 
 
 const router = require("./app/routing/htmlroutes")
 const routerAPI = require("./app/routing/apiRoutes")
