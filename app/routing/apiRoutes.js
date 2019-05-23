@@ -22,11 +22,12 @@ router.post("/friends", function (req, res) {
     let matchPhoto; 
 
     //value to be changed later
-    let totalDifference =100; 
-    let difference = 0; 
-
+    
+    
     for (let  i = 0; i < friends.length; i++ ) {
 
+        let difference = 0; 
+        let totalDifference =100; 
         for (let j = 0; j <user.length; j++) {
 
             difference += Math.abs(friends[i].scores[j] - user[j])
