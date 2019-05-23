@@ -16,9 +16,36 @@ router.post("/friends", function (req, res) {
 
     let newFriends = req.body;
 
-    friends.push(newFriends);
-    //res.json(true);
+    let user = parseInt(newFriends.scores); 
 
+    let matchName; 
+    let matchPhoto; 
+
+    //dummy value to be changed later 
+    let totalDifference =100; 
+    let difference = 0; 
+
+    for (let  i = 0; i < friends.length; i++ ) {
+
+        for (let j = 0; j <user.length; j++) {
+
+            difference += Math.abs(friends[i].scores[j] - user[j])
+
+
+        }
+
+        if (difference < totalDifference) {
+
+            totalDifference = difference; 
+            matchName = friends[i].name; 
+            matchPhoto = friends[i].photo; 
+        }
+
+
+    }
+
+    friends.push(newFriends);
+    res.json(matchName, matchPhoto);
 
 });
 
