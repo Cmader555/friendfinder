@@ -21,7 +21,7 @@ router.post("/friends", function (req, res) {
     let matchName; 
     let matchPhoto; 
 
-    //dummy value to be changed later 
+    //value to be changed later
     let totalDifference =100; 
     let difference = 0; 
 
@@ -45,7 +45,7 @@ router.post("/friends", function (req, res) {
     }
 
     friends.push(newFriends);
-    res.json(matchName, matchPhoto);
+    res.json({matchName:matchName, matchPhoto:matchPhoto});
 
 });
 

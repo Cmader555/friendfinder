@@ -234,13 +234,16 @@
             console.log(newFriends);
 
             $.post("/api/friends", newFriends, function (data) {
-                $("#matchName").text(data.name);
-                $('#matchPhoto').attr("src", data.photo);
+
+                //console.log(data.matchPhoto); 
+                //console.log(data.matchName)
+                $("#matchName").text(data.matchName);
+                $('#matchPhoto').attr("src", data.matchPhoto);
                 // Show the modal with the best match 
                 $("#matchModal").modal('toggle');
             });
 
-        });   
+        });
 
     </script>
 
