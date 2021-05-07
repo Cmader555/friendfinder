@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Cmader555/friendfinder#readme",
   "dependencies": {
     "express": "^4.17.0",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "nodemon": "^1.19.0",
     "path": "^0.12.7"
   },
